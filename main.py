@@ -45,6 +45,7 @@ sp = preprocess.SpanishPreprocess(
 print('Cargando datos...')
 
 ciuo_df = pd.read_csv("data_in/ciuo08_v8.csv",encoding='utf-8', index_col=0)
+#ciuo_df = ciuo_df.drop(columns=['Unnamed: 0','b16_otro', 'cise', 'b16', 'curso', 'nivel', 'termino','nummesesempleo'])
 ciuo_df.dropna(inplace=True)
 ciuo_df = ciuo_df.drop(ciuo_df[ciuo_df.clase1 == 999].index)
 ciuo_df = ciuo_df.drop(ciuo_df[ciuo_df.clase == 999].index)
@@ -64,7 +65,6 @@ train_loader_caenes2d, test_loader_caenes2d, labels_unique_caenes2d, test_datase
 
 print('Datos cargados.')
 
-
 print('Inicializando modelos...')
 # CIUO MODELS
 model_ciuo1d = BERT_CIUOClass(out_size=10)
@@ -81,11 +81,11 @@ model_caenes2d.load_state_dict(torch.load('models/BERT_caenes_2d.pth',map_locati
 print('Modelos cargados.')
 
 print('Calculando predicciones...')
-y_pred_ciuo1d = predict_baseline(ciuo1d_X_test,carpeta = 'ciuo1d',versions=['SVM_ciuo1d'])
-y_pred_ciuo2d = predict_baseline(ciuo2d_X_test,carpeta = 'ciuo2d',versions=['SVM_ciuo2d'])
+y_pred_ciuo1d = predict_baseline(ciuo1d_X_test,carpeta = 'ciuo1d',versions=['SVM_ciuo1d', 'MLP_ciuo1d'])
+y_pred_ciuo2d = predict_baseline(ciuo2d_X_test,carpeta = 'ciuo2d',versions=['SVM_ciuo2d', 'MLP_ciuo2d'])
 print('Baseline ciuo listo.')
-y_pred_caenes1d = predict_baseline(caenes1d_X_test,carpeta = 'caenes1d',versions=['SVM_caenes1d'])
-y_pred_caenes2d = predict_baseline(caenes2d_X_test,carpeta = 'caenes2d',versions=['SVM_caenes2d'])
+y_pred_caenes1d = predict_baseline(caenes1d_X_test,carpeta = 'caenes1d',versions=['SVM_caenes1d', 'MLP_caenes1d'])
+y_pred_caenes2d = predict_baseline(caenes2d_X_test,carpeta = 'caenes2d',versions=['SVM_caenes2d', 'MLP_caenes2d'])
 print('Baseline caenes listo.')
 fin_outputs_ciuo1d, fin_targets_ciuo1d = validation(model_ciuo1d, test_loader_ciuo1d)
 fin_outputs_ciuo2d, fin_targets_ciuo2d = validation(model_ciuo2d, test_loader_ciuo2d)
@@ -145,3 +145,19 @@ print('Predicciones calculadas. Mostrando resultados:')
 #compare_models(caenes1d_y_test, y_pred_caenes1d, targets_caenes1d, outputs_caenes1d, labels_unique_caenes1d, 'CAENES-1Digito')
 
 #compare_models(caenes2d_y_test, y_pred_caenes2d, targets_caenes2d, outputs_caenes2d, labels_unique_caenes2d, 'CAENES-2Digito')
+
+
+# El siguiente código genera un archivo csv donde se consolidan las mejores predicciones de cada modelo para cada clasificación
+from best_prediction import consolidar_clasificaciones
+
+filepath = Path('data_out/caenes1d/')
+consolidar_clasificaciones(filepath)
+
+filepath = Path('data_out/caenes2d/')
+consolidar_clasificaciones(filepath)
+
+filepath = Path('data_out/ciuo1d/')
+consolidar_clasificaciones(filepath)
+
+filepath = Path('data_out/ciuo2d/')
+consolidar_clasificaciones(filepath)
