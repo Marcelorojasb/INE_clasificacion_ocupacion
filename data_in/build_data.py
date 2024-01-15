@@ -52,7 +52,6 @@ def build_dataloader(in_df,text,labels):
     df.drop(columns = [labels], inplace = True)
     df['list'] = df[df.columns[1:]].values.tolist()
     new_df = df[[text, 'list']].copy()
-    new_df.sample(10)
     # Defining some key variables that will be used later on in the training
     MAX_LEN = 200
     TRAIN_BATCH_SIZE = 32
@@ -64,7 +63,7 @@ def build_dataloader(in_df,text,labels):
 
     train_dataset=in_df.sample(frac=train_size,random_state=200)
     test_dataset=in_df.drop(train_dataset.index)
-    test_dataset = test_dataset.sample(n=10, random_state=42)
+    test_dataset = test_dataset.sample(n=100, random_state=42)
     
     X_train = pd.DataFrame(train_dataset[text])
     y_train = train_dataset[labels]
@@ -73,7 +72,7 @@ def build_dataloader(in_df,text,labels):
     
     train_dataset=new_df.sample(frac=train_size,random_state=200)
     test_dataset=new_df.drop(train_dataset.index)
-    test_dataset = test_dataset.sample(n=10, random_state=42).reset_index(drop=True)
+    test_dataset = test_dataset.sample(n=100, random_state=42).reset_index(drop=True)
     train_dataset = train_dataset.reset_index(drop=True)
     
     # Aquí
