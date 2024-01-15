@@ -1,0 +1,101 @@
+texto_ciuo,id,preds,probs
+asistente contable auditoria,61571,33.0,0.5678067803382874
+dueño local comida,48661,51.0,0.3950324058532715
+profesora particular,60651,23.0,0.8707965016365051
+junior,42055,96.0,0.7942330837249756
+ayudante vidriero corta vidrios coloca vidrios ventanas limpeiza local,24568,93.0,0.48161834478378296
+ingeniera administracion asiste reuniones se encarga libros contabilidad empresa renumeraciones pago trabajadores,28348,21.0,0.5536587238311768
+profesor musica enseña tocar violin niños jovenes,19204,23.0,0.8692886829376221
+dueño negocio abarrotes,63903,52.0,0.9058133363723755
+comerciante dueño negocio administrar negocio abarrotes vende atender publico compra proveedores,20434,52.0,0.9123079776763916
+obrero agricola,52415,92.0,0.8312270045280457
+asesor ingenieria empresa contratista lipigas instalador autorizado gas clase experto calderas industriales fiscaliza instalaciones gas,13836,21.0,0.8322879076004028
+jefa mucamas cabañas recepcionar pasajeros instrucciones mucanas,5068,51.0,0.8258678317070007
+vendedor,36761,52.0,0.9180595874786377
+administar local administrar local maquina tragamonedas,27538,14.0,0.4885016083717346
+comerciante ambulante atencion clientes ventas cobro mercancia carga descarga mercancia,31527,95.0,0.5989134907722473
+tecnico juridico,40271,34.0,0.7268037796020508
+gerente gral,60038,12.0,0.37927931547164917
+programador aplicaciones,35593,25.0,0.5601330399513245
+administrativo,44564,41.0,0.2979556918144226
+analisis financiera planificacion financiera empresa retail planificacion inversiones empresa retail,17131,24.0,0.6212536096572876
+administrar pensionista entregar alimento entregar alimento completo casa,1681,51.0,0.6985554099082947
+talador cortando arboles pino quemados rollizos motosierra,26692,92.0,0.48566657304763794
+cajera bancaria atencion publico arqueos,5224,42.0,0.7972217202186584
+laboratorista dental atencion pacientes hace protesis dentales atencion del local cobra servicios,33075,32.0,0.8280932903289795
+administrar carniceria,47190,52.0,0.5115787386894226
+personal aseo limpia barre hospital,12789,91.0,0.8852974772453308
+auxiliar bodega traslada arma ordena elementos escenografias productora,23097,93.0,0.49224379658699036
+orfebre artesanal,43471,73.0,0.7840247750282288
+labores aseo empresa automotriz,53772,91.0,0.8843986392021179
+soldador al arco,58195,72.0,0.8286205530166626
+profesor liceo tecnico preparar clases calificar pasar asistencia,29029,23.0,0.8709163665771484
+analista contable ver conciliaciones bancarias,66676,24.0,0.5361770391464233
+operario pesquera,52370,93.0,0.8041253089904785
+administrativa,36777,41.0,0.2892392575740814
+dueña almacen,44073,52.0,0.9260543584823608
+encargada registro social hogar dirigir equipo supervisar,16471,26.0,0.6990261673927307
+tecnico enfermeria asistencia paciente servicio medicina administrar medicamentos pacientes aseo colocar inyeccion etc,10134,32.0,0.8398787379264832
+cajera,48513,52.0,0.8561551570892334
+operador maquina secadora madera,63695,81.0,0.6313015222549438
+mecanico reparacion vehiculos,6613,72.0,0.8133562207221985
+vendedora exportadora importadora juguetes zofri vende ofrecer mercancia realizar inventarios cuadra caja,5191,52.0,0.9178037643432617
+personal aeropuerto,35589,51.0,0.6893414855003357
+operaria area reposteria cuarto frio caliente reponen vitrina confeccionar elaboracion pasteleria,21062,94.0,0.346071720123291
+ayudante albañil,63163,93.0,0.8245872855186462
+cocinera preprar papas fritas,33642,94.0,0.5170623064041138
+jardinero jardinero areas verdes publicas riega siembra cortar limpia areas verdes,5669,61.0,0.8201513290405273
+mecanico industrial taller mecanico mantencion maquinas industriales,2338,72.0,0.8046425580978394
+encargada informatica se encarga recolectar internet reclamos institucion problemas funcionamiento escolares mecanicos bonos sueldos etc,67169,25.0,0.11506842821836472
+comerciante paqueteria atender local comercial rubro paqueteria,3108,52.0,0.9220271706581116
+gerente banco atender cartera empresas,6376,12.0,0.3198402523994446
+transportista escolar traslado niños escuela,2493,83.0,0.9137783646583557
+auxiliar aseo lavado quirurgico dependencias teleton aseo lavado quirurgivo instalaciones oficinas juguetes terapia maquinas terapia,3822,91.0,0.8537833094596863
+dueña local comida rapida cocinar compras cobro almuerzo,7316,94.0,0.34057071805000305
+dueña empresa,61276,13.0,0.30476680397987366
+servicio agricola inspectora inspeciona fruta se va estados unidos,28837,33.0,0.56794273853302
+vendedora,52391,52.0,0.9251089096069336
+comerciante feria,58286,52.0,0.9125372171401978
+educadora parvulo,39534,23.0,0.8658748865127563
+cajera metro part time fin semana realizar cargas tarjetas bip estaciones metro,9173,52.0,0.9018230438232422
+jefe empresa trabajo dedicado gestion empresa gestion cobros,15099,12.0,0.5718452334403992
+musico banda bronce tocar variados istrumento,836,26.0,0.8044882416725159
+constructor civil,44483,21.0,0.8461162447929382
+cuidado adultor mayor,63258,53.0,0.8192655444145203
+ingeniero prevencion riesgo,55096,22.0,0.7892085909843445
+guardia seguridad,51747,54.0,0.844986081123352
+jefa personal,59929,12.0,0.3968885540962219
+vendedor mostrador terreno,53141,33.0,0.5683441162109375
+tecnico enfermeria,61498,32.0,0.8327875137329102
+paletizador robotico sella cajas fruta forma robotizada maquina industrial,26567,93.0,0.6106767058372498
+instalador piedras,60463,71.0,0.8548063635826111
+gasfiter viviendas particulares,37364,71.0,0.8559100031852722
+vendedor establecido,42914,52.0,0.9228534698486328
+trabajora social analista social criminal delitos comisaria,7097,26.0,0.8175057768821716
+tecnico parvulo,35243,36.0,0.8071123957633972
+gerencia empresa servicio tecnica computacion gestion logistica,12949,13.0,0.44749993085861206
+fruticultor plantando frutillales,29012,61.0,0.8345431089401245
+maestro marmolero hacer cubiertos cocina marmol hacer vanitorio,68825,71.0,0.8185484409332275
+panadero,35082,75.0,0.8469823598861694
+jefe tramitaciones permiso encargada permiso construccion arquitectura coordinacion permiso proyectos,27242,13.0,0.3132607936859131
+prevencionista riesgos,35420,22.0,0.780112087726593
+buzo,63856,75.0,0.7320584654808044
+supervisor,35544,31.0,0.6403186917304993
+manipuladora alimentos cocina corta verduras lava frutas,34079,94.0,0.6660215854644775
+reponedor vendedor,52844,93.0,0.5203842520713806
+jornalero construccion,61773,93.0,0.8235310912132263
+secretaria pagarse recibos aguas del pueblo,68001,33.0,0.5988489389419556
+enfermera titulada atencion pacientes,18444,22.0,0.8223438858985901
+carnicero cortador desportador carnes atencion publico,1707,75.0,0.8280475735664368
+ejecutiva bancaria ejecutiva credito hipotecario,17802,33.0,0.8296855688095093
+maestro construccion remodelacion liviana gruesa vivienda oficina,6251,71.0,0.8532447218894958
+tecnico enfermeria,38828,32.0,0.8327875137329102
+tesorera supervisora,62031,52.0,0.38399502635002136
+mani curista atencion clientas,25269,51.0,0.7424507737159729
+jornal construccion concretero enfierrador pintan empastador,18790,93.0,0.830966055393219
+asesora del hogar,45974,91.0,0.9076072573661804
+vendedor terreno,58049,33.0,0.6201604008674622
+asistente social atencion publico visitas terreno trabajo ministerio interior,7478,26.0,0.8245172500610352
+temporera agricola,65932,92.0,0.8457269072532654
+tecnico paramendico,55482,32.0,0.8297023177146912
+vendedora ropa usada diversa mercadería reciclable,61056,52.0,0.8778371214866638
