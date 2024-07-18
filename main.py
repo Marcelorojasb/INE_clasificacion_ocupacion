@@ -1,9 +1,26 @@
-import torch
-import pandas as pd
+# El siguiente archivo contiene todo lo necesario para entrenar los modelos y obtener las predicciones necesarias
+# Para correr este archivo por PRIMERA vez, debe hacer lo siguiente:
+#      1. Abrir CMD de Windows
+#      2. Navegar hasta el directorio del proyecto
+#      3. Crear un entorno virtual de python:
+#               Esto puede hacerlo con la siguiente línea de comando: python -m venv "nombre_entorno"
+#      4. Verifique si el entorno está activado, debe aparecer "(nombre_entorno)" al inicio de su directorio en el shell de CMD
+#      5. Si no se encuentra ativado, active el entorno virual:
+#               Ingrese el comando: "nombre_entorno"\Scritpts\activate
+#      6. Instalar dependencias del proyecto en el entorno virual:
+#               Ingrese como comando: pip install -r requirements.txt
+#      7. Ejecutar el archivo mediante la siguiente línea de comando: python main.py
+
+# Importación de archivos internos
 from models.bert import BERT_CIUOClass, BERT_CAENESClass
 from predictors.bert import predict_single_sample, validation
 from predictors.baselines import predict_baseline
 from data_in.build_data import build_dataloader
+from utils.metrics import calculate_metrics, plot_comparison_bar_graph, compare_models
+
+# Importación de librerías necesarias
+import torch
+import pandas as pd
 from transformers import BertTokenizer, BertModel, BertConfig
 import unidecode
 from spanish_nlp import preprocess
@@ -14,7 +31,6 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import transformers
 from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampler
 from sklearn.model_selection import train_test_split
-from utils.metrics import calculate_metrics, plot_comparison_bar_graph, compare_models
 from pathlib import Path
 
 sp = preprocess.SpanishPreprocess(
