@@ -1,3 +1,6 @@
+# El siguiente archivo permite consolidar un CSV que contega la mejor predicción posible
+# comparando las predicciones por clase de cada modelo y almacenando la "mejor predicción"
+
 import os
 import pandas as pd
 
