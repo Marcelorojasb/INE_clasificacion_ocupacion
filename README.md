@@ -7,7 +7,7 @@ El siguiente repositorio tiene la finalidad de facilitar la clasificación ocupa
 El proyecto utiliza tres modelos (BERT, SVM y MLP) para realizar la clasificación de forma independiente para el caso de cada clasificador (Caenes y Ciuo-08). 
 El modelo está construido como una combinación de modelos independientes que llevan a cabo la clasificación de forma simultánea. Posteriormente, y en base a las métricas obtenidas de la clasificación, se genera un resultado consolidado el cual agrupa los mejores resultados de clasificación para cada clase en un archivo CSV dentro de la carpeta *data_out*.
 
-## Reglas generales
+## Información general
 Es repositorio cuenta con cinco carpetas principales y tres archivos "sueltos" importantes.
 ### Carpetas
 - **data_in**: Esta carpeta almacena todos los "inputs" del modelo. Para actualizar los datos a clasificar, deberán reemplazarse los archivos ".csv" existentes en la carpeta (si es que existen). Es importante que siempre se guarden con el mismo nombre, es decir, "caenes.csv" y "ciuo08_v8.csv". El archivo "build_data.py" almacena la información necesaria para construir los set de datos necesario para la clasificación a partir de los archivos CSV cargados, por lo que **no debe** ser alterado.
@@ -24,7 +24,7 @@ Podrán ver la existencia de dos archivos con la extensión ".ipynb", estos arch
 
 ## Instrucciones de uso
 1. Descarga este repositorio o clónalo dentro de una carpeta de tu directorio de trabajo
-      - Para clonar este repositorio deberás tener instalado Git. En caso de no tener Git en tu dispositivo, puedes descargarlo desde el siguiente link: https://git-scm.com/download/win
+      - Para clonar este repositorio deberás tener instalado Git. En caso de no tener Git en tu dispositivo, puedes descargarlo desde el siguiente [link](https://git-scm.com/download/win).
       - Una vez instalado Git, deberás abrir la aplicación Git Bash. Esto puedes hacerlo apretando clic derecho dentro de la carpeta en que se quiera clonar el repositorio y seleccionando "Abrir Git Bash aquí"
       - Dentro de Git Bash, deberán ingresar el siguiente comando: `git clone https://github.com/Osilva97/P13-INE.git`
       - Debería poder ver el repositorio en la carpeta donde fue clonado y navegar por sus archivos
@@ -41,3 +41,8 @@ Podrán ver la existencia de dos archivos con la extensión ".ipynb", estos arch
 6. Carga los modelos de clasificación a la carpeta "models". Los modelos puedes encontrarlos en el siguiente [drive](https://drive.google.com/drive/folders/1VbCUkdXT2jEeQgcpO-TRQToggyogHj0g?usp=sharing).
 7. En la consola de comandos, con el entorno virtual activado, ejecuta el archivo "main.py" ingresando el siguiente comando: `python main.py`
 8. Pasado el tiempo de compilación, deberías ver los resultados en forma de archivos CSV en la carpeta "data_out".
+
+## Links útiles:
+- Creación de entornos virtuales: https://docs.python.org/es/3.10/library/venv.html
+- Python 3.10.12 (descargar archivo tar): https://www.python.org/downloads/release/python-31012/
+- Instalación de versiones antiguas de python desde archivos tar: https://medium.com/@lupiel/installing-python-from-a-tgz-file-a-step-by-step-guide-4cf5f4a17a86
