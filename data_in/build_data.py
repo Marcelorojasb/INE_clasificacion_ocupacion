@@ -1,3 +1,5 @@
+# Este archivo crea los set de datos para CIUO-08 y CAENES
+
 import numpy as np
 import pandas as pd
 from transformers import BertTokenizer
@@ -41,6 +43,38 @@ class CustomDataset(Dataset):
         }
 
 def build_dataloader(in_df,text,labels):
+    '''
+    ### build_dataloader(df, text, labels):
+    Crea el dataset y el dataloader para llevar a cabo el entrenamiento de la red neuronal. \n
+    Un dataLoader, como su nombre indica, permite hacer una carga de los datos, pero añadiendo \n
+    características para cargar los datos con dichas características.
+
+    ### Parámetros:
+    df: pandas datafrme
+        Set de datos a utilizar para el entrenamiento de la red neuronal. 
+
+    text: str, default=None
+        Nombre de la columna que contiene los textos a procesar.
+
+    labels: str, default=None
+        Nombre de la columna que contiene las etiquetas de los textos a procesar.
+
+    ### Resultados:
+    Se obtiene un tupla con los dataloader de la base de entrenamiento y testeo, además de una lista con las etiquetas \n
+    únicas presentes en los datos y el dataset de entrenamiento.
+
+    training_loader: DataLoader()
+        Dataloader para la base de entrenamiento
+
+    testing_loader: Dataloader()
+        Dataloader para la base de prueba
+
+    labels_unique: list
+        Lista con etiquetas únicas
+
+    test_dataset: pandas dataframe
+        Set de datos de testeo
+    '''
     # Obtén la lista de etiquetas únicas
     labels_unique = in_df[labels].unique()
     in_df[text] = in_df[text].astype(str)
@@ -52,15 +86,15 @@ def build_dataloader(in_df,text,labels):
     df.drop(columns = [labels], inplace = True)
     df['list'] = df[df.columns[1:]].values.tolist()
     new_df = df[[text, 'list']].copy()
-    # Defining some key variables that will be used later on in the training
-    MAX_LEN = 200
-    TRAIN_BATCH_SIZE = 32
-    VALID_BATCH_SIZE = 128
-    tokenizer = BertTokenizer.from_pretrained('mrm8488/distill-bert-base-spanish-wwm-cased-finetuned-spa-squad2-es')
-    # Creating the dataset and dataloader for the neural network
-
+    
+    # Defineir variables claves necesarias para el entrenamiento
+    MAX_LEN = 200 # Largo máximo de los tokens
+    TRAIN_BATCH_SIZE = 32 # Tamaño del batch de entrenamiento
+    VALID_BATCH_SIZE = 128 # Tamaño máximo del batch de entrenamiento
+    tokenizer = BertTokenizer.from_pretrained('mrm8488/distill-bert-base-spanish-wwm-cased-finetuned-spa-squad2-es') # Tokenizador entrenado con modelo bert en español
+    
+    # Crear el dataset y el dataloader para la red neuronal
     train_size = 0.8
-
     train_dataset=in_df.sample(frac=train_size,random_state=200)
     test_dataset=in_df.drop(train_dataset.index)
     test_dataset = test_dataset.sample(n=100, random_state=42)
