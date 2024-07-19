@@ -1,12 +1,15 @@
+# El siguiente archivo crea los tensores a partir de los textos para obtener la predicción de BERT
+
 import torch
 import transformers
-# Creating the customized model, by adding a drop out and a dense layer on top of distil bert to get the final output for the model.
+# ENG: Creating the customized model, by adding a drop out and a dense layer on top of distill mBERT to get the final output for the model.
+# ESP: Creando el modelo customizado, se agrega una capa de drop out y una capa densa sobre el modelo distill mBERT para obtener el resultado final del modelo
 
 class BERT_CIUOClass(torch.nn.Module):
     def __init__(self, out_size):
         super(BERT_CIUOClass, self).__init__()
-        self.l1 = transformers.BertModel.from_pretrained('mrm8488/distill-bert-base-spanish-wwm-cased-finetuned-spa-squad2-es')
-        #self.l1 = transformers.BertModel.from_pretrained('dccuchile/bert-base-spanish-wwm-cased')
+        self.l1 = transformers.BertModel.from_pretrained('mrm8488/distill-bert-base-spanish-wwm-cased-finetuned-spa-squad2-es') # Modelo bert multilingual
+        #self.l1 = transformers.BertModel.from_pretrained('dccuchile/bert-base-spanish-wwm-cased') # Modelo bert entrenado en español por Universidad de Chile
         self.l2 = torch.nn.Dropout(0.05)
         self.l3 = torch.nn.Linear(768, 128)
         self.l4 = torch.nn.LayerNorm((128,), eps=1e-12, elementwise_affine=True)
@@ -26,8 +29,8 @@ class BERT_CIUOClass(torch.nn.Module):
 class BERT_CAENESClass(torch.nn.Module):
     def __init__(self, out_size):
         super(BERT_CAENESClass, self).__init__()
-        self.l1 = transformers.BertModel.from_pretrained('mrm8488/distill-bert-base-spanish-wwm-cased-finetuned-spa-squad2-es')
-        #self.l1 = transformers.BertModel.from_pretrained('dccuchile/bert-base-spanish-wwm-cased')
+        self.l1 = transformers.BertModel.from_pretrained('mrm8488/distill-bert-base-spanish-wwm-cased-finetuned-spa-squad2-es') # Modelo BERT multilingual
+        #self.l1 = transformers.BertModel.from_pretrained('dccuchile/bert-base-spanish-wwm-cased') # Modelo BERT entrenado en español por Universidad de Chile
         self.l2 = torch.nn.Dropout(0.05)
         self.l3 = torch.nn.Linear(768, 256)
         self.l4 = torch.nn.LayerNorm((256,), eps=1e-12, elementwise_affine=True)
