@@ -23,24 +23,45 @@ Es repositorio cuenta con cinco carpetas principales y tres archivos "sueltos" i
 Podrán ver la existencia de dos archivos con la extensión ".ipynb", estos archivos son Jupyter Notebooks que fueron utilizados para validar los modelos creados. Son dispensables para el funcionamiento del repositorio.
 
 ## Instrucciones de uso
-1. Descarga este repositorio o clónalo dentro de una carpeta de tu directorio de trabajo
-      - Para clonar este repositorio deberás tener instalado Git. En caso de no tener Git en tu dispositivo, puedes descargarlo desde el siguiente [link](https://git-scm.com/download/win).
-      - Una vez instalado Git, deberás abrir la aplicación Git Bash. Esto puedes hacerlo apretando clic derecho dentro de la carpeta en que se quiera clonar el repositorio y seleccionando "Abrir Git Bash aquí"
-      - Dentro de Git Bash, deberán ingresar el siguiente comando: `git clone https://github.com/Osilva97/P13-INE.git`
-      - Debería poder ver el repositorio en la carpeta donde fue clonado y navegar por sus archivos
-2. Crea un entorno virtual e instala el archivo con los requerimientos del proyecto
-      - **IMPORTANTE**: El repositorio funciona con la versión de **Python 3.10.12** (la versión 3.10.11 puede ser compatible), por lo que asegúrate de que crees tu entorno virtual con dicha versión. Puedes verificar la versión de python antes de crear el entorno virtual ingresando el siguiente comando: `python --version`. Si tu versión de python es distinta, debes instalar la versión indicada antes de realizar los pasos siguientes. Puedes descargar la versión indicada desde el siguiente [link](https://www.python.org/downloads/release/python-31012/).
-      - Abre la consola de comandos de windows y navega hasta la carpeta donde almacenaste el repositorio
-      - Crea un entorno virtual ingresando el siguiente comando: `python -m venv <<nombre_entorno>>`
-      - Verifica si el entorno está activado, debe aparecer *(nombre_entorno)* antepuesto a la ruta de su directorio la consola de comandos
-      - Si no se encuentra ativado, activa el entorno virual ingresando el siguiente comando: `<<nombre_entorno>>\Scritpts\activate`
-      - Instalar dependencias del proyecto en el entorno virual ingresando el siguiente comando: `pip install -r requirements.txt`
-      - El repositorio debería estar listo para su uso
-4. Actualiza las dependencia de la carpeta "data_in". Basta con eliminar los archivos CSV existentes y cargar los archivos nuevos. Recuerde que estos deben mantener los nombres de los archivos originales, es decir: "caenes.csv" y "ciuo08_v8.csv".
-5. Asegurate de que no haya información dentro de "data_out" además de las carpetas "caenesd1", "caenesd2", "ciuo1d" y "ciuo2d".
-6. Carga los modelos de clasificación a la carpeta "models". Los modelos puedes encontrarlos en el siguiente [drive](https://drive.google.com/drive/folders/1VbCUkdXT2jEeQgcpO-TRQToggyogHj0g?usp=sharing).
-7. En la consola de comandos, con el entorno virtual activado, ejecuta el archivo "main.py" ingresando el siguiente comando: `python main.py`
-8. Pasado el tiempo de compilación, deberías ver los resultados en forma de archivos CSV en la carpeta "data_out".
+- Descarga este repositorio o clónalo dentro de una carpeta de tu directorio de trabajo
+- Para clonar este repositorio deberás tener instalado Git. En caso de no tener Git en tu dispositivo, puedes descargarlo desde el siguiente [link](https://git-scm.com/download/win).
+- Una vez instalado Git, deberás abrir la aplicación Git Bash. Esto puedes hacerlo apretando clic derecho dentro de la carpeta en que se quiera clonar el repositorio y seleccionando "Abrir Git Bash aquí"
+- Dentro de Git Bash, deberán ingresar el siguiente comando:
+```
+git clone https://github.com/Marcelorojasb/INE_clasificacion_ocupacion.git
+```
+- Debería poder ver el repositorio en la carpeta donde fue clonado y navegar por sus archivos
+- A continuación, se recomienda crear un entorno virtual para instalar las librerías del proyecto (requirements.txt)
+- **IMPORTANTE**: El repositorio funciona con la versión de **Python 3.10.12** (la versión **3.10.11** puede ser compatible), por lo que asegúrate de que crees tu entorno virtual con dicha versión. Puedes verificar la versión de python antes de crear el entorno virtual ingresando el siguiente comando: `python --version`. Si tu versión de python es distinta, debes instalar la versión indicada antes de realizar los pasos siguientes. Puedes descargar la versión indicada desde los siguientes enlaces: [Python 3.10.11](https://www.python.org/downloads/release/python-31011/), [Python 3.10.12 (solo anaconda)](https://anaconda.org/anaconda/python/files?sort=length&sort_order=asc&version=3.10.12).
+- Abre la consola de comandos de windows y navega hasta la carpeta donde almacenaste el repositorio
+- Crea un entorno virtual ingresando los siguientes comando:
+```
+pip install virtualenv
+python -m venv <<nombre_entorno>>
+```
+- Si tiene problemas para crear el entorno verifique si *pip* y la librería *venv* están instalados. Para esto ejecute los siguientes comandos (Si no están instalados se instalarán automáticamente):
+```
+py -m ensurepip --upgrade
+pip install virtualenv
+```
+- Verifica si el entorno está activado, debe aparecer *(nombre_entorno)* antepuesto a la ruta de su directorio la consola de comandos
+- Si no se encuentra ativado, activa el entorno virual ingresando el siguiente comando: 
+```
+<<nombre_entorno>>\Scripts\activate
+```
+- Para instalar las librerías del proyecto en el entorno virual ingrese el siguiente comando: 
+```
+pip install -r requirements.txt
+```
+- El repositorio debería estar listo para su uso
+- Para actualizar los archivos de la carpeta "data_in" (preguntar por nuevas predicciones). Basta con eliminar los archivos CSV existentes y cargar los archivos nuevos. **Recuerde que estos deben mantener los nombres de los archivos originales, es decir: "caenes.csv" y "ciuo08_v8.csv".**
+- Asegurate de que no haya información dentro de "data_out" además de las carpetas "caenesd1", "caenesd2", "ciuo1d" y "ciuo2d".
+- Carga los modelos de clasificación a la carpeta "models". Los modelos puedes encontrarlos en la siguiente carpeta de [drive](https://drive.google.com/drive/folders/1VbCUkdXT2jEeQgcpO-TRQToggyogHj0g?usp=sharing).
+- En la consola de comandos, con el entorno virtual activado, ejecuta el archivo "main.py" ingresando el siguiente comando: 
+```
+python main.py
+```
+- Pasado el tiempo de compilación, deberías ver los resultados en forma de archivos CSV en la carpeta "data_out".
 
 ## Links útiles:
 - Creación de entornos virtuales: https://docs.python.org/es/3.10/library/venv.html

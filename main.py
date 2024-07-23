@@ -33,6 +33,7 @@ from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampl
 from sklearn.model_selection import train_test_split
 from pathlib import Path
 
+pd.options.mode.chained_assignment = None  # default='warn'
 sp = preprocess.SpanishPreprocess(
         lower=True,
         remove_url=False,
