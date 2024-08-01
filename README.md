@@ -36,7 +36,6 @@ git clone https://github.com/Marcelorojasb/INE_clasificacion_ocupacion.git
 - Abre la consola de comandos de windows y navega hasta la carpeta donde almacenaste el repositorio
 - Crea un entorno virtual ingresando los siguientes comando:
 ```
-pip install virtualenv
 python -m venv <<nombre_entorno>>
 ```
 - Si tiene problemas para crear el entorno verifique si *pip* y la librería *venv* están instalados. Para esto ejecute los siguientes comandos (Si no están instalados se instalarán automáticamente):
